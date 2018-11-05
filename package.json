@@ -1,0 +1,23 @@
+{
+  "name": "app-tarefas-mevn",
+  "version": "1.0.0",
+  "description": "Simples aplicativo de tarefas usando MEVN",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JardelGoncalves/app-tarefas-mevn.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JardelGoncalves/app-tarefas-mevn/issues"
+  },
+  "homepage": "https://github.com/JardelGoncalves/app-tarefas-mevn#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
