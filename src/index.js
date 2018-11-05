@@ -1,6 +1,17 @@
 const express = require("express");
 const app = express();
 
-app.listen(3000, function () {
-    console.log("server on port 3000 !!!"); 
+// Configurações
+app.set("port", 3000)
+
+// Middlewares
+
+// Rotas
+
+// Arquivos estáticos
+app.use(express.static(__dirname + "/public"));
+
+// Servidor
+app.listen(app.get("port"), function () {
+    console.log("server on port", app.get("port"), "!!!"); 
 });
