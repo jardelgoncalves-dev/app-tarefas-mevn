@@ -4,7 +4,8 @@
   "description": "Simples aplicativo de tarefas usando MEVN",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon src/index.js"
+    "dev": "nodemon src/index.js",
+    "webpack": "webpack --mode development"
   },
   "repository": {
     "type": "git",
@@ -22,5 +23,13 @@
     "mongoose": "^5.3.9",
     "morgan": "^1.9.1",
     "nodemon": "^1.18.5"
+  },
+  "devDependencies": {
+    "babel-loader": "^8.0.4",
+    "babel-preset-env": "^1.7.0",
+    "vue-loader": "^15.4.2",
+    "vue-template-compiler": "^2.5.17",
+    "webpack": "^4.25.1",
+    "webpack-cli": "^3.1.2"
   }
 }
