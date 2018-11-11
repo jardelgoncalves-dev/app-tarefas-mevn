@@ -8,8 +8,8 @@ const Schema = mongoose.Schema;
 const Tarefa = new Schema({
     titulo: String,
     descricao: String
-}, { 
-    versionKey: '_somethingElse' 
+}, {
+    versionKey: false
 });
 
 // Exporta para usar em routes

@@ -12,6 +12,14 @@ router.get("/", function(req, res, next){
             res.json(doc);
         });
 });
+
+router.get("/:id", function(req, res){
+    const tarefa = Tarefa.findById(req.params.id)
+    .then(function(tarefa){
+        res.json(tarefa);
+    })
+})
+
 // Adicionar tarefas no banco
 router.post("/", function(req, res, next){
     const tarefa = new Tarefa(req.body);
@@ -23,7 +31,7 @@ router.post("/", function(req, res, next){
 
 // Atualizar tarefas
 router.put("/:id", function(req, res, next){
-    Tarefa.findOneAndUpdate(req.params.id, req.body, function(err, result){
+    Tarefa.updateOne({_id:req.params.id}, req.body, function(err, result){
         if(err){
             console.log(err);
         }
@@ -35,7 +43,7 @@ router.put("/:id", function(req, res, next){
 
 // Deletar tarefa
 router.delete("/:id", function(req, res, next){
-    Tarefa.findOneAndDelete(req.params.id, function(err, result){
+    Tarefa.deleteOne({_id:req.params.id}, function(err, result){
         if(err){
             console.log(err);
         };

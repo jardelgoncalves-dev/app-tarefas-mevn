@@ -19,7 +19,7 @@ app.use(morgan("dev"));
 app.use(express.json());
 
 // Rotas
-app.use("/tarefas",require("./routes/tarefas"));
+app.use("/api/tarefas",require("./routes/tarefas"));
 
 // Arquivos estáticos
 app.use(express.static(__dirname + "/public"));
